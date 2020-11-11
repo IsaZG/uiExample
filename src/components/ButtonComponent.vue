@@ -1,11 +1,11 @@
 <template>
   <component
-    :is="type === 'regular' ? 'span' : 'a'"
-    class="badge"
-    :class="'badge-' + variant"
+    :is="tag === 'button' ? 'button' : tag === 'a' ? 'a' : 'input'"
+    class="btn"
+    :class="'btn-' + variant"
     :type="type"
     :href="href"
-    :value="value"
+    :role="role"
   >
     <slot></slot>
   </component>
@@ -16,11 +16,12 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   props: {
-    variant: String,
+    tag: String,
     type: String,
+    variant: String,
     href: String,
-    value: String
+    role: String
   }
 })
-export default class BadgeComponent extends Vue {}
+export default class ButtonComponent extends Vue {}
 </script>

@@ -34,17 +34,89 @@
     <h3>Breadcrumbs</h3>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <BreadcrumbComponent type="item">
+        <BreadcrumbComponent variant="item">
           <a href="#">Home</a>
         </BreadcrumbComponent>
-        <BreadcrumbComponent type="item">
+        <BreadcrumbComponent variant="item">
           <a href="#">Next</a>
         </BreadcrumbComponent>
-        <BreadcrumbComponent type="item active" aria-current="page"
+        <BreadcrumbComponent variant="item active" aria-current="page"
           >Next</BreadcrumbComponent
         >
       </ol>
     </nav>
+    <h3>Buttons</h3>
+    <ButtonComponent tag="button" variant="primary" type="button"
+      >Primary</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="secondary" type="button"
+      >Secondary</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="success" type="button"
+      >Success</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="a" href="#" variant="primary" role="button"
+      >Hi there!</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="primary" type="submit"
+      >Hey you!</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="a" variant="primary" type="submit" value="Input"
+      >Testing!</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="outline-primary"
+      >Test!</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="outline-danger"
+      >Danger</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="secondary btn-lg" type="button"
+      >Large Button</ButtonComponent
+    >
+    <br />
+    <ButtonComponent tag="button" variant="primary btn-sm" type="button"
+      >Small Button</ButtonComponent
+    >
+    <br />
+    <ButtonComponent
+      tag="button"
+      variant="primary btn-lg btn-block"
+      type="button"
+      >Block Button</ButtonComponent
+    >
+    <br />
+    <ButtonComponent
+      tag="a"
+      variant="primary btn-lg active"
+      role="button"
+      aria-pressed="true"
+      href="#"
+      >Primary link</ButtonComponent
+    >
+    <br />
+    <ButtonComponent
+      tag="button"
+      variant="lg btn-primary"
+      type="button"
+      disabled
+      >Disabled</ButtonComponent
+    >
+    <br />
+    <ButtonComponent
+      tag="button"
+      variant="primary"
+      data-toggle="button"
+      aria-pressed="false"
+      >Single Toogle</ButtonComponent
+    >
   </div>
 </template>
 
@@ -54,13 +126,15 @@ import HelloWorld from "./components/HelloWorld.vue";
 import AlertComponent from "./components/AlertComponent.vue";
 import BadgeComponent from "./components/BadgeComponent.vue";
 import BreadcrumbComponent from "./components/BreadcrumbComponent.vue";
+import ButtonComponent from "./components/ButtonComponent.vue";
 
 @Component({
   components: {
     HelloWorld,
     AlertComponent,
     BadgeComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    ButtonComponent
   }
 })
 export default class App extends Vue {}

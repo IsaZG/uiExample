@@ -1,5 +1,5 @@
 <template>
-  <li :class="'breadcrumb-' + type">
+  <li :class="'breadcrumb-' + variant">
     <slot></slot>
   </li>
 </template>
@@ -9,7 +9,7 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   props: {
-    type: String
+    variant: String
   }
 })
 export default class BreadcrumbComponent extends Vue {}
